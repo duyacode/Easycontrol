@@ -3,9 +3,6 @@ package top.eiyooooo.easycontrol.app
 import android.app.Application
 import android.content.Context
 import android.os.Build
-import androidx.appcompat.app.AppCompatDelegate
-import com.google.android.material.color.DynamicColors
-import com.google.android.material.color.DynamicColorsOptions
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import timber.log.Timber
 import top.eiyooooo.easycontrol.app.entity.Preferences
@@ -38,12 +35,5 @@ class MyApplication : Application() {
         FLog.init(this)
         if (Preferences.enableLog) FLog.startFLog()
         Timber.i("App started at: $appStartTime")
-
-        AppCompatDelegate.setDefaultNightMode(Preferences.darkTheme)
-        DynamicColors.applyToActivitiesIfAvailable(this,
-            DynamicColorsOptions.Builder()
-                .setPrecondition { _, _ -> Preferences.systemColor }
-                .build()
-        )
     }
 }
