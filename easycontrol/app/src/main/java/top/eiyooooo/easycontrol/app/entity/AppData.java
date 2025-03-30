@@ -78,7 +78,7 @@ public class AppData {
     myBroadcastReceiver.register(main);
     myBroadcastReceiver.checkConnectedUsb(main);
     getRealScreenSize(m);
-    setting = new Setting(main.getSharedPreferences("setting", Context.MODE_PRIVATE));
+    setting = new Setting();
     // 读取密钥文件
     try {
       AdbKeyPair.setAdbBase64(new AdbBase64() {
