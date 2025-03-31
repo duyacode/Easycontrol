@@ -1,7 +1,10 @@
 package top.eiyooooo.easycontrol.app.helper;
 
 import android.app.usage.UsageEvents;
+import android.os.Build;
 import android.os.SystemClock;
+
+import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -70,5 +73,23 @@ public class EventMonitor {
     public static void stopMonitor() {
         if (monitorThread != null) monitorThread.interrupt();
         monitorRunning = false;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
+    public static ArrayList<UsageEvents.Event> getUsageEvents(long interval) {
+        long ts = System.currentTimeMillis();
+        UsageEvents usageEvents = AppData.usageStatsManager.queryEvents(ts - interval, ts);
+        if (usageEvents == null) return null;
+        else return UnpackUsageEvents(usageEvents);
+    }
+
+    private static ArrayList<UsageEvents.Event> UnpackUsageEvents(UsageEvents usageEvents) {
+        if (usageEvents == null) return new ArrayList<>();
+        ArrayList<UsageEvents.Event> arrayList = new ArrayList<>();
+        while (usageEvents.hasNextEvent()) {
+            UsageEvents.Event event = new UsageEvents.Event();
+            if (usageEvents.getNextEvent(event)) arrayList.add(event);
+        }
+        return arrayList;
     }
 }

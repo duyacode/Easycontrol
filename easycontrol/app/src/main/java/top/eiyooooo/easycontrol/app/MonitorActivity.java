@@ -1,5 +1,7 @@
 package top.eiyooooo.easycontrol.app;
 
+import static top.eiyooooo.easycontrol.app.helper.EventMonitor.getUsageEvents;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
@@ -185,24 +187,6 @@ public class MonitorActivity extends Activity {
     });
     if (event.responseType == 1) monitorActivity.changeToMiniEvents.post(() -> monitorActivity.changeToMiniEvents.addView(textView.getRoot()));
     else if (event.responseType == 2) monitorActivity.changeToSmallEvents.post(() -> monitorActivity.changeToSmallEvents.addView(textView.getRoot()));
-  }
-
-  @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
-  private static ArrayList<UsageEvents.Event> getUsageEvents(long interval) {
-    long ts = System.currentTimeMillis();
-    UsageEvents usageEvents = AppData.usageStatsManager.queryEvents(ts - interval, ts);
-    if (usageEvents == null) return null;
-    else return UnpackUsageEvents(usageEvents);
-  }
-
-  private static ArrayList<UsageEvents.Event> UnpackUsageEvents(UsageEvents usageEvents) {
-    if (usageEvents == null) return new ArrayList<>();
-    ArrayList<UsageEvents.Event> arrayList = new ArrayList<>();
-    while (usageEvents.hasNextEvent()) {
-      UsageEvents.Event event = new UsageEvents.Event();
-      if (usageEvents.getNextEvent(event)) arrayList.add(event);
-    }
-    return arrayList;
   }
 
   private String explainEvent(int eventType) {
