@@ -9,7 +9,6 @@ import android.widget.Toast;
 import top.eiyooooo.easycontrol.app.entity.AppData;
 import top.eiyooooo.easycontrol.app.helper.PublicTools;
 import top.eiyooooo.easycontrol.app.databinding.ActivitySetBinding;
-import top.eiyooooo.easycontrol.app.helper.ShortcutHelper;
 
 public class SetActivity extends Activity {
   private ActivitySetBinding setActivity;
