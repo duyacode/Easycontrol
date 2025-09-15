@@ -107,17 +107,7 @@ public class SetActivity extends Activity {
       AppData.reGenerateAdbKeyPair(this);
       Toast.makeText(this, getString(R.string.set_other_clear_key_code), Toast.LENGTH_SHORT).show();
     }).getRoot());
-    setActivity.setOther.addView(PublicTools.createTextCard(this, getString(R.string.set_other_locale), () -> {
-      String locale = AppData.setting.getDefaultLocale();
-      if (locale.isEmpty()) {
-        if (String.valueOf(setActivity.textAbout.getText()).contains("关于")) AppData.setting.setDefaultLocale("en");
-        else AppData.setting.setDefaultLocale("zh");
-      }
-      else if (locale.equals("en")) AppData.setting.setDefaultLocale("zh");
-      else if (locale.equals("zh")) AppData.setting.setDefaultLocale("en");
-      Toast.makeText(this, getString(R.string.set_other_locale_code), Toast.LENGTH_SHORT).show();
-    }).getRoot());
-
+    
   }
 
   // 设置按钮监听
