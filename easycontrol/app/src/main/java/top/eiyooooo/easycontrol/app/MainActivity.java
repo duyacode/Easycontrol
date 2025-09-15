@@ -49,7 +49,6 @@ public class MainActivity extends Activity {
     // 首次使用显示使用说明
     if (!AppData.setting.getShowUsage()) {
       AppData.setting.setShowUsage(true);
-      AppData.uiHandler.postDelayed(() -> PublicTools.openWebViewActivity(this, "file:///android_asset/usage.html"), 1500);
     }
     if (!Client.allClient.isEmpty()) {
       Client.allClient.get(0).clientView.changeToFull();
