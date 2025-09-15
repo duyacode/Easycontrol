@@ -46,13 +46,6 @@ public class MainActivity extends Activity {
     ConnectHelper.status = true;
     // 设置按钮监听
     setButtonListener();
-    // 首次使用显示使用说明
-    if (!AppData.setting.getShowUsage()) {
-      AppData.setting.setShowUsage(true);
-    }
-    if (!Client.allClient.isEmpty()) {
-      Client.allClient.get(0).clientView.changeToFull();
-    }
   }
 
   @Override
