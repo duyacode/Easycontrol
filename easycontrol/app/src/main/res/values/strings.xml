@@ -3,11 +3,7 @@
   <string name="app_name">易控车机</string>
 
   <!-- 主页 -->
-  <string name="main_poem">规范行车</string>
   <string name="car_version_message">易控车机</string>
-  <string name="main_float_permission">请授予悬浮窗权限</string>
-  <string name="main_float_permission_button">前往授权悬浮</string>
-  <string name="main_no_float_mode_button">始终全屏模式</string>
 
   <!-- 配对页面 -->
   <string name="pair_ip">IP地址</string>
@@ -42,12 +38,14 @@
   <string name="set_display_keep_screen_awake_detail">连接过程中被控端不锁定</string>
   <string name="set_display_default_show_nav_bar">默认显示导航栏</string>
   <string name="set_display_default_show_nav_bar_detail">设置默认是否显示导航栏</string>
-  <string name="set_display_full_fill">全屏模式拉伸填充画面</string>
-  <string name="set_display_full_fill_detail">在全屏模式下画面拉伸并填充所有可用区域</string>
+  <string name="set_display_full_fill">链接后拉伸画面</string>
+  <string name="set_display_full_fill_detail">全屏模式下画面拉伸并填充所有可用区域</string>
+
+  
   <string name="set_other">其他</string>
   <string name="set_audio_channel">音频输出声道</string>
   <string name="set_audio_channel_detail">没有特殊需要请保持0声道</string>
-  <string name="set_enable_usb">启用USB设备检测</string>
+  <string name="set_enable_usb">打开USB设备检测</string>
   <string name="set_enable_usb_detail">若不希望使用有线连接，可关闭</string>
   <string name="set_set_full_screen">沉浸式全屏模式</string>
   <string name="set_set_full_screen_detail">若不希望全屏模式时本机导航栏消失，可关闭</string>
@@ -61,23 +59,14 @@
   <string name="set_reconnect_detail">设备异常断开时显示重连对话框</string>
   <string name="set_connect_usb">显示连接默认USB设备对话框</string>
   <string name="set_connect_usb_detail">检测到默认USB设备显示自动连接对话框，关闭则自动连接</string>
-  <string name="set_auto_countdown">自动任务等待时长 (秒)</string>
+  <string name="set_auto_countdown">自动任务等待时长</string>
   <string name="set_auto_countdown_detail">设备异常断开时自动重连前或默认USB设备连接前等待时长</string>
   <string name="set_no_auto_countdown">不自动确认</string>
   <string name="set_other_custom_key">自定义密钥(需重新授权)</string>
   <string name="set_other_clear_key">重新生成密钥(需重新授权)</string>
   <string name="set_other_clear_key_code">已刷新</string>
-  <string name="set_other_locale">语言切换</string>
-  <string name="set_other_locale_code">OK, you may need to restart the APP</string>
-  <string name="set_create_startup_shortcut">创建快捷方式</string>
   <string name="set_other_log">查看日志</string>
-  <string name="set_about">关于</string>
   <string name="set_about_ip">查看本机IP及扫描设备</string>
-  <string name="set_about_website">项目主页</string>
-  <string name="set_about_how_to_use">使用说明</string>
-  <string name="set_about_privacy">隐私政策</string>
-  <string name="set_license">开源证书</string>
-  <string name="set_about_version">版本: </string>
 
   <!-- 查看IP地址页面 -->
   <string name="ip_title">本机地址</string>
@@ -106,7 +95,7 @@
   <string name="add_device_address">地址:端口号</string>
   <string name="add_device_address_hint">支持IPv4/v6地址、域名</string>
   <string name="add_device_specify_app">流转指定包名的应用</string>
-  <string name="add_device_specify_app_hint">留空则为最近使用的应用流转</string>
+  <string name="add_device_specify_app_hint">留空为最近使用应用流转</string>
   <string name="add_device_scan">扫描</string>
   <string name="add_device_scanning">扫描中</string>
   <string name="add_device_scan_finish">扫描完成</string>
@@ -167,7 +156,7 @@
   <string name="option_is_audio_detail">开启后将尝试传输音频</string>
   <string name="option_clipboard_sync">剪贴板同步</string>
   <string name="option_clipboard_sync_detail">同步主控端和被控端的剪贴板</string>
-  <string name="option_night_mode_sync">黑暗模式同步</string>
+  <string name="option_night_mode_sync">黑暗模式</string>
   <string name="option_night_mode_sync_detail">同步主控端和被控端的黑暗模式</string>
   <string name="option_max_size">最大大小</string>
   <string name="option_max_size_detail">设置画面长和宽的最大大小</string>
@@ -182,7 +171,7 @@
   <string name="option_use_opus_detail">优先使用Opus，实际以支持情况为主</string>
   <string name="option_default_full">全屏启动</string>
   <string name="option_default_full_detail">开启后在连接成功后直接进入全屏状态</string>
-  <string name="option_set_resolution">应用流转宽高比例自动缩放</string>
+  <string name="option_set_resolution">应用流转自动缩放</string>
   <string name="option_set_resolution_detail">开启后应用流转可自动缩放</string>
 
   <!-- 设备列表展开 -->
