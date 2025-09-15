@@ -6,17 +6,6 @@
   android:background="@drawable/background_cron"
   android:orientation="vertical">
 
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="25dp"
-    android:layout_marginTop="25dp"
-    android:layout_marginEnd="25dp"
-    android:layout_marginBottom="15dp"
-    android:text="@string/set_device_title"
-    android:textColor="@color/onCardBackground"
-    android:textSize="@dimen/middleFont" />
-
   <GridLayout
     android:id="@+id/button_layout"
     android:layout_width="match_parent"
@@ -90,19 +79,5 @@
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
     android:layout_marginBottom="12dp" />
-
-  <Button
-    android:id="@+id/button_start_wireless"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:background="@drawable/background_cron"
-    android:backgroundTint="@color/button"
-    android:gravity="center"
-    android:text="@string/set_device_button_start_wireless"
-    android:textColor="@color/onButton"
-    android:textSize="@dimen/smallFont"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginBottom="16dp" />
 
 </LinearLayout>
