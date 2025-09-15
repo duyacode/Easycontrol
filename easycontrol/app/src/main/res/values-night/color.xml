@@ -10,7 +10,7 @@
   <color name="onCardDivider">#80FFFFFF</color>
 
   <!-- 特殊色彩 -->
-  <color name="button">#00acde</color>
+  <color name="button">#FFFFFF</color>
   <color name="onButton">#414141</color>
   <color name="alert">#00acde</color>
   <color name="onAlert">#ded8d8</color>
