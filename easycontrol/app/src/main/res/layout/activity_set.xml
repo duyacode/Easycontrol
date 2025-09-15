@@ -88,19 +88,6 @@
         android:dividerPadding="5dp"
         android:showDividers="middle" />
 
-
-      <LinearLayout
-        android:id="@+id/set_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/background_cron"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:divider="@drawable/divider_line"
-        android:dividerPadding="5dp"
-        android:showDividers="middle" />
-
     </LinearLayout>
   </ScrollView>
 </LinearLayout>
