@@ -6,9 +6,6 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
 
 import java.io.InputStream;
@@ -30,30 +27,7 @@ public class PairActivity extends Activity {
         pairActivity = ActivityPairBinding.inflate(this.getLayoutInflater());
         setContentView(pairActivity.getRoot());
         pairActivity.backButton.setOnClickListener(v -> finish());
-        String url = "file:///android_asset/pair.html";
-        if (String.valueOf(pairActivity.nightModeDetector.getText()).contains("EasyControl")) {
-            String tempUrl = url.replace(".html", "_en.html");
-            if (ifAssetExists(tempUrl)) url = tempUrl;
-        }
-        if (pairActivity.nightModeDetector.getCurrentTextColor() == 0xFFDEDEDE) {
-            String tempUrl = url.replace(".html", "_dark.html");
-            if (ifAssetExists(tempUrl)) url = tempUrl;
-        }
-        if (!ifAssetExists(url)) {
-            finish();
-            return;
-        }
-        pairActivity.webview.loadUrl(url);
-        WebSettings webSettings = pairActivity.webview.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        pairActivity.webview.setWebViewClient(new WebViewClient() {
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                pairActivity.webview.setVisibility(View.VISIBLE);
-            }
-        });
-
+        
         if (pairActivity.panel != null) {
             pairActivity.panel.post(() -> {
                 DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
@@ -131,21 +105,5 @@ public class PairActivity extends Activity {
                 pairActivity.certRegenerate.setClickable(true);
             });
         });
-    }
-
-    public boolean ifAssetExists(String filename) {
-        AssetManager assetManager = getAssets();
-        try {
-            InputStream inputStream;
-            if (filename.contains("file:///android_asset/")) {
-                inputStream = assetManager.open(filename.substring(22));
-            } else {
-                inputStream = assetManager.open(filename);
-            }
-            inputStream.close();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
     }
 }
