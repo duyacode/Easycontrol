@@ -416,13 +416,6 @@ public class PublicTools {
     return spinnerView;
   }
 
-  // 显示网页
-  public static void openWebViewActivity(Context context, String url) {
-    Intent license = new Intent(context, WebViewActivity.class);
-    license.putExtra("url", url);
-    context.startActivity(license);
-  }
-
   // 分离地址和端口号
   public static Pair<String, Integer> getIpAndPort(String address) throws IOException {
     String pattern;
