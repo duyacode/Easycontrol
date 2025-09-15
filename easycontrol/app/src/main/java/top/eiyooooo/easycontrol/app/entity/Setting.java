@@ -44,7 +44,7 @@ public final class Setting {
   }
 
   public int getDefaultMaxVideoBit() {
-    return sharedPreferences.getInt("defaultMaxVideoBit", 4);
+    return sharedPreferences.getInt("defaultMaxVideoBit", 8);
   }
 
   public void setDefaultMaxVideoBit(int value) {
