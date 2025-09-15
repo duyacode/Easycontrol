@@ -29,7 +29,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import top.eiyooooo.easycontrol.app.R;
-import top.eiyooooo.easycontrol.app.WebViewActivity;
 import top.eiyooooo.easycontrol.app.adb.Adb;
 import top.eiyooooo.easycontrol.app.client.Client;
 import top.eiyooooo.easycontrol.app.databinding.*;
