@@ -88,16 +88,6 @@
         android:dividerPadding="5dp"
         android:showDividers="middle" />
 
-      <TextView
-        android:id="@+id/text_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/set_about"
-        android:textColor="@color/onBackground"
-        android:textSize="@dimen/middleFont" />
 
       <LinearLayout
         android:id="@+id/set_about"
